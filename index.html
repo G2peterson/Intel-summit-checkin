@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intel Sustainability Summit Check-In</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>Intel Team Sustainability Summit</h1>
+        <p>Check-in system for sustainability event attendees</p>
+      </header>
+
+      <section class="card">
+        <div class="row center">
+          <div class="attendance">
+            <span class="label">Attendance</span>
+            <span id="attendance-text" class="value">0 / 50</span>
+          </div>
+        </div>
+
+        <div class="progress-wrap" aria-label="Attendance progress">
+          <div class="progress-track">
+            <div
+              id="progress-fill"
+              class="progress-fill"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+            ></div>
+          </div>
+        </div>
+
+        <p id="greeting" class="greeting" aria-live="polite"></p>
+        <p id="celebration-message" class="celebration" aria-live="polite"></p>
+        <p id="error-message" class="error" aria-live="polite"></p>
+
+        <form class="checkin" onsubmit="return false;">
+          <label>
+            Attendee Name
+            <input id="attendee-name" type="text" placeholder="Enter name..." autocomplete="off" />
+          </label>
+
+          <label>
+            Select Team
+            <select id="team-select">
+              <option value="">Select team...</option>
+              <option value="water">Team Water Wise</option>
+              <option value="netZero">Team Net Zero</option>
+              <option value="renewables">Team Renewables</option>
+            </select>
+          </label>
+
+          <button id="check-in-btn" type="button">Check In</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Team Attendance</h2>
+        <div class="teams">
+          <div class="team">
+            <div class="team-title">Team Water Wise</div>
+            <div id="water-count" class="team-count">0</div>
+          </div>
+          <div class="team">
+            <div class="team-title">Team Net Zero</div>
+            <div id="netzero-count" class="team-count">0</div>
+          </div>
+          <div class="team">
+            <div class="team-title">Team Renewables</div>
+            <div id="renewables-count" class="team-count">0</div>
+          </div>
+        </div>
+
+        <h3 class="list-title">Attendee List</h3>
+        <ul id="attendee-list" class="attendee-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
