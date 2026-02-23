@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; background: #f4f6f8; color: #111; }
+.container { max-width: 920px; margin: 24px auto; padding: 0 16px; }
+.hero { background: #0b5cab; color: white; padding: 20px 18px; border-radius: 12px; }
+.hero h1 { margin: 0 0 6px 0; font-size: 28px; }
+.hero p { margin: 0; opacity: 0.9; }
+
+.card { background: white; border-radius: 12px; padding: 16px; margin-top: 16px; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+.row.center { display: flex; justify-content: center; }
+.attendance { display: flex; gap: 10px; align-items: baseline; }
+.attendance .label { font-weight: 600; opacity: 0.8; }
+.attendance .value { font-weight: 800; font-size: 20px; }
+
+.progress-wrap { margin: 12px 0 10px; }
+.progress-track { width: 100%; height: 12px; background: #e6eaf0; border-radius: 999px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: #0b5cab; transition: width 150ms ease; }
+
+.greeting { margin: 10px 0 4px; font-weight: 700; }
+.celebration { margin: 0 0 6px; font-weight: 800; }
+.error { margin: 0 0 6px; color: #b00020; font-weight: 600; min-height: 20px; }
+
+.checkin { display: grid; grid-template-columns: 1fr 1fr auto; gap: 10px; margin-top: 10px; align-items: end; }
+label { display: grid; gap: 6px; font-size: 14px; }
+input, select { padding: 10px; border: 1px solid #cfd7e3; border-radius: 10px; font-size: 14px; }
+button { padding: 10px 14px; border: none; border-radius: 10px; background: #0b5cab; color: white; font-weight: 800; cursor: pointer; }
+button:hover { opacity: 0.92; }
+
+.teams { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+.team { border: 1px solid #e6eaf0; border-radius: 12px; padding: 10px; text-align: center; }
+.team-title { font-weight: 700; font-size: 14px; opacity: 0.9; }
+.team-count { font-weight: 900; font-size: 26px; margin-top: 6px; }
+
+.list-title { margin: 16px 0 8px; }
+.attendee-list { margin: 0; padding-left: 18px; }
+.attendee-list li { padding: 4px 0; }
+
+@media (max-width: 740px) {
+  .checkin { grid-template-columns: 1fr; }
+  .teams { grid-template-columns: 1fr; }
+}
